@@ -3,8 +3,8 @@ updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     target-branch: "master"
-    schedule:
-      interval: "daily"
+    #schedule:
+    #  interval: "daily"
     commit-message:
       prefix: "Git submodule"
     labels:
