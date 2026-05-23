@@ -53,7 +53,7 @@ fn initialize(app_dir: &str, custom_client_config: &str) {
     #[cfg(target_os = "android")]
     {
         // flexi_logger can't work when android_logger initialized.
-        #[cfg(debug_assertions)]
+        //#[cfg(debug_assertions)]
         android_logger::init_once(
             android_logger::Config::default()
                 .with_max_level(log::LevelFilter::Debug) // limit log level

@@ -487,6 +487,11 @@ pub extern "C" fn JNI_OnLoad(vm: jni::JavaVM, res: *mut std::os::raw::c_void) ->
         let vm = vm.get_java_vm_pointer() as *mut std::os::raw::c_void;
         init_ndk_context(vm, res);
     }
+	android_logger::init_once(
+            android_logger::Config::default()
+                .with_max_level(log::LevelFilter::Debug) // limit log level
+                .with_tag("ffi"), // logs will show under mytag tag
+        );
     jni::JNIVersion::V6.into()
 }
 
