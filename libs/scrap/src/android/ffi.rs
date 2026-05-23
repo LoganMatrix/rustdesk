@@ -492,6 +492,7 @@ pub extern "C" fn JNI_OnLoad(vm: jni::JavaVM, res: *mut std::os::raw::c_void) ->
                 .with_max_level(log::LevelFilter::Debug) // limit log level
                 .with_tag("ffi"), // logs will show under mytag tag
         );
+	log::info!(" dyimic so JNI_OnLoad() sucess ! ");
     jni::JNIVersion::V6.into()
 }
 
