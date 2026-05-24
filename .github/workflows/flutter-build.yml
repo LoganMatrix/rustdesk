@@ -65,7 +65,7 @@ jobs:
           - {
               arch: armv7,
               target: armv7-linux-androideabi,
-              os: ubuntu-24.04,
+              os: ubuntu-22.04,
               reltype: release,
               suffix: "",
             }
